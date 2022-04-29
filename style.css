@@ -11,8 +11,6 @@
 }
 
 
-
-
 /* =================== BUG =================== */
 
 body{
@@ -59,16 +57,20 @@ body{
 /* =================== HEADER/NAVBAR =================== */
 
 .navbar{
-    position: fixed;
-    top: 0;
     width: 100%;
     height: 100px;
+
+    position: fixed;
+    top: 0;
+    z-index: 999999;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50px;
+    
     backdrop-filter: blur(10px);
-    z-index: 999999;
+
+    padding: 0 50px;
 }
 
 .logo{
@@ -334,3 +336,72 @@ body{
 }
 /* =================== END SECTION SERVIÇOS =================== */
 
+
+
+
+/* =================== PAGE COMPRA  =================== */
+
+.compra{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-compra{
+    width: 80%;
+    height: 75%;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #221f2e;
+
+    border-radius: 20px;
+
+    margin-top: 6rem;
+}
+
+.compra-wrapper{
+    width: 80%;
+    height: 80%;
+
+    display: grid;
+    grid-template-areas:"img title"
+                        "img description"
+                        "img infos"
+                        "img btn";
+    grid-template-columns: 300px 1fr;
+    row-gap: 5rem;
+}
+
+.compra-img{
+    grid-area: img;
+}
+
+.compra-title{
+    grid-area: title;
+}
+
+.compra-description{
+    grid-area: description;
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    text-indent: 4rem;
+}
+
+.compra-infos{
+    grid-area: infos;
+}
+
+.compra-btn{
+    grid-area: btn;
+    background-color: yellowgreen;
+}
+/* =================== END PAGE COMPRA =================== */

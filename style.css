@@ -354,7 +354,6 @@ body{
     width: 80%;
     height: 75%;
 
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -370,16 +369,23 @@ body{
     height: 80%;
 
     display: grid;
-    grid-template-areas:"img title"
-                        "img description"
-                        "img infos"
-                        "img btn";
-    grid-template-columns: 300px 1fr;
-    row-gap: 5rem;
+    grid-template-areas:"title"
+                        "description"
+                        "infos"
+                        "btn";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap: 2rem;
+    column-gap: 3rem;
 }
 
 .compra-img{
     grid-area: img;
+}
+
+.compra-img img{
+    width: 100%;
+    height: 100%;
 }
 
 .compra-title{
@@ -389,19 +395,85 @@ body{
 .compra-description{
     grid-area: description;
     
+    background-color: #231f34;
+
+    border-radius: 20px;
+
     display: flex;
     align-items: center;
     flex-direction: column;
 
     text-indent: 4rem;
+
+    padding: 2rem;
 }
 
 .compra-infos{
     grid-area: infos;
+
+    background-color: #231f34;
+
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 2rem;
+    gap: 1rem;
 }
 
-.compra-btn{
-    grid-area: btn;
-    background-color: yellowgreen;
+.compra-infos span{
+    font-weight: 700;
 }
+
+.comprar{
+    grid-area: btn;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #231f34;
+
+    border-radius: 20px;
+
+    transition: all 0.5s;
+}
+
+.comprar:hover{
+    background-color: #201c2f;
+}
+
+.comprar span{
+    font-weight: 700;
+}
+
 /* =================== END PAGE COMPRA =================== */
+
+#footer{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content{
+    width: 1200px;
+    height: 10vh;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-content a{
+    color: #FFF;
+}
+
+.footer-content a img{
+    width: 60px;
+    color: #FFF;
+}

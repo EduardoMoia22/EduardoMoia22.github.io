@@ -402,9 +402,7 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
-
-    text-indent: 4rem;
-
+    
     padding: 2rem;
 }
 
